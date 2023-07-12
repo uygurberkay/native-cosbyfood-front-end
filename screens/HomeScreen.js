@@ -6,7 +6,7 @@ import * as Icon from "react-native-feather";
 import {themeColors} from '../theme'
 import Categories from '../components/categories';
 import { featured } from '../constants';
-import FeaturedRow from '../components/featuredrow';
+import FeaturedRow from '../components/featuredRow'
 
 export default function HomeScreen() {
     return (
