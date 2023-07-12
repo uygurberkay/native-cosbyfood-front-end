@@ -35,7 +35,10 @@ const FeaturedRow = ({title, restaurants, description}) => {
             {
                 restaurants.map((restaurants,index)=> {
                     return(
-                        <RestaurandCard />
+                        <RestaurandCard 
+                            item={restaurants}
+                            key={index}
+                        />
                     )
                 })
             }

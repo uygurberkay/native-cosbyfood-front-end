@@ -4,8 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import * as Icon from "react-native-feather";
 import {themeColors} from '../theme'
-import Categories from '../components/categories';
 import { featured } from '../constants';
+import Categories from '../components/Categories';
 import FeaturedRow from '../components/featuredRow'
 
 export default function HomeScreen() {
@@ -26,6 +26,7 @@ export default function HomeScreen() {
                     <Icon.Sliders height={20} width={20} strokeWidth="2.5" stroke="white" />
                 </View>
             </View>
+            {/* Her menü seçeneğinde useEffect ile o sayfaya render ayarla */}
             {/* main */}
             <ScrollView  
                 showsVerticalScrollIndicator={false}
@@ -40,7 +41,9 @@ export default function HomeScreen() {
                 className="mt-5"
             >
                 {
-                    [featured, featured, featured].map((item,index) => { 
+                    
+                    [featured, featured, featured]
+                     .map((item,index) => { 
                         return (
                             <FeaturedRow 
                                 key={index}

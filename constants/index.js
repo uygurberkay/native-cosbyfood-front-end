@@ -96,19 +96,19 @@ export const categories = [
 
 export const featured = {
     id: 1,
-    title: 'Hot and Spicy',
-    description: 'soft and tender fried chicken',
+    title: 'Fast Food',
+    description: 'Ağızda Dağılan Etler',
     restaurants: [
         {
             id: 1,
-            name: 'Papa Johns',
+            name: "McDonald's",
             image: require('../assets/images/pizza.png'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
             address: '434 second street',
-            stars: 4,
-            reviews: '4.4k',
+            stars: 5,
+            reviews: '2.1k',
             category: 'Fast Food',
             dishes: [
                 {
@@ -143,8 +143,8 @@ export const featured = {
             lng: -85.5324269,
             lat: 38.2145602,
             address: '434 second street',
-            stars: 4,
-            reviews: '4.4k',
+            stars: 1,
+            reviews: '3.2k',
             category: 'Fast Food',
             dishes: [
                 {
@@ -173,14 +173,122 @@ export const featured = {
         },
         {
             id: 3,
-            name: 'Papa Johns',
+            name: "Arby's",
             image: require('../assets/images/pizza.png'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
             address: '434 second street',
+            stars: 2,
+            reviews: '1.5k',
+            category: 'Fast Food',
+            dishes: [
+                {
+                    id: 1,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 2,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 3,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+            ]
+    
+        },
+        {
+            id: 3,
+            name: 'Subway',
+            image: require('../assets/images/subway.jpg'),
+            description: 'Hot and spicy pizzas',
+            lng: -85.5324269,
+            lat: 38.2145602,
+            address: '434 second street',
             stars: 4,
-            reviews: '4.4k',
+            reviews: '5.3k',
+            category: 'Fast Food',
+            dishes: [
+                {
+                    id: 1,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 2,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 3,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+            ]
+    
+        },
+        {
+            id: 4,
+            name: 'Burger King',
+            image: require('../assets/images/pizza.png'),
+            description: 'Hot and spicy pizzas',
+            lng: -85.5324269,
+            lat: 38.2145602,
+            address: '434 second street',
+            stars: 3,
+            reviews: '3.2k',
+            category: 'Fast Food',
+            dishes: [
+                {
+                    id: 1,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 2,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 3,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+            ]
+    
+        },
+        {
+            id: 5,
+            name: 'Usta Dönerci',
+            image: require('../assets/images/subway.jpg'),
+            description: 'Hot and spicy pizzas',
+            lng: -85.5324269,
+            lat: 38.2145602,
+            address: '434 second street',
+            stars: 4,
+            reviews: '2.6k',
             category: 'Fast Food',
             dishes: [
                 {
