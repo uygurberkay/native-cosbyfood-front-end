@@ -102,12 +102,13 @@ export const featured = {
         {
             id: 1,
             name: "McDonald's",
-            image: require('../assets/images/pizza.png'),
+            image: require('../assets/images/brand/mcdonalds.jpg'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Konak',
             stars: 5,
+            time: '15-25 min',
             reviews: '2.1k',
             category: 'Fast Food',
             dishes: [
@@ -142,8 +143,9 @@ export const featured = {
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Alsancak',
             stars: 1,
+            time: '20-25 min',
             reviews: '3.2k',
             category: 'Fast Food',
             dishes: [
@@ -174,12 +176,13 @@ export const featured = {
         {
             id: 3,
             name: "Arby's",
-            image: require('../assets/images/pizza.png'),
+            image: require('../assets/images/brand/arby.png'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Buca',
             stars: 2,
+            time: '15-35 min',
             reviews: '1.5k',
             category: 'Fast Food',
             dishes: [
@@ -208,14 +211,15 @@ export const featured = {
     
         },
         {
-            id: 3,
+            id: 4,
             name: 'Subway',
-            image: require('../assets/images/subway.jpg'),
+            image: require('../assets/images/brand/subway.jpg'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Konak',
             stars: 4,
+            time: '25-35 min',
             reviews: '5.3k',
             category: 'Fast Food',
             dishes: [
@@ -244,14 +248,15 @@ export const featured = {
     
         },
         {
-            id: 4,
+            id: 5,
             name: 'Burger King',
-            image: require('../assets/images/pizza.png'),
+            image: require('../assets/images/brand/burgerKing.jpeg'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Alsancak',
             stars: 3,
+            time: '15-25 min',
             reviews: '3.2k',
             category: 'Fast Food',
             dishes: [
@@ -280,14 +285,15 @@ export const featured = {
     
         },
         {
-            id: 5,
+            id: 6,
             name: 'Usta Dönerci',
-            image: require('../assets/images/subway.jpg'),
+            image: require('../assets/images/brand/ustaDonerci.jpg'),
             description: 'Hot and spicy pizzas',
             lng: -85.5324269,
             lat: 38.2145602,
-            address: '434 second street',
+            address: ' Bayraklı',
             stars: 4,
+            time: '10-15 min',
             reviews: '2.6k',
             category: 'Fast Food',
             dishes: [

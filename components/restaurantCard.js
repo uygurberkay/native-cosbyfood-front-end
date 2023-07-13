@@ -1,19 +1,33 @@
-import { View, Text, TouchableWithoutFeedback, Image, ScrollView} from 'react-native'
+import { View, Text, TouchableWithoutFeedback, Image, ScrollView, TouchableOpacity} from 'react-native'
 import React from 'react'
+import * as Icon from "react-native-feather";
+import {themeColors} from '../theme'
+import { useNavigation } from '@react-navigation/native';
 
 const RestaurantCard = ({item}) => {
+    const navigation = useNavigation()
     return (
-        <TouchableWithoutFeedback>
-            <View className="mr-6 bg-white rounded-3xl shadow-lg">
+        <TouchableWithoutFeedback
+            onPress={() => {
+                navigation.navigate('Restaurant', {...item})
+            }}
+        >
+            <View
+                style={{
+                    shadowColor: themeColors.bgColor(0.3), 
+                    shadowRadius:6
+                }}
+                className="mr-6 bg-white rounded-xl shadow-lg">
                 <Image 
-                    className="h-36 w-64 rounded-t-3xl" 
+                    className="h-36 w-64 rounded-t-xl" 
                     source={item.image}
                 />
-                <View className="px-3 pb-4 space-y-2 ">
+                <View className="px-3 pb-4 space-y-2">
                     <Text className="text-lg font-bold pt-2">
                         {item.name}
                     </Text>
                     <View className="flex-row items-center space-x-1">
+                        {/* multiple stars */}
                         {Array.from({ length: item.stars }, (_, index) => (
                             <Image
                             key={index}
@@ -21,16 +35,29 @@ const RestaurantCard = ({item}) => {
                             className="h-4 w-4"
                             />
                         ))}
+                        {/* <Image
+                            source={require('../assets/images/fullStar.png')}
+                            className="h-4 w-4"
+                            /> */}
                         <Text className="text-green-700">
                             {/* doesn't show for now */}
                             {/* {item.stars} */}
                         </Text>
                         <Text className="text-gray-700">
-                            ({item.reviews} review) .
-                            <Text className="font-semibold">
-                                {item.category}
-                            </Text>
+                            {/* ({item.reviews} review)    */}
                         </Text>
+                        <Text className="font-semibold">
+                            {item.category}
+                        </Text>
+                    </View>
+                    <View className="flex-row items-center space-x-1">
+                        <Icon.MapPin color="gray" width={15} height={15} />
+                        <Text className="text-gray-700 text-xs"> Nearby · </Text>
+                        <Text className="text-gray-700 text-xs font-semibold">{item.address}</Text>
+                    </View>
+                    <View className="flex-row items-center space-x-1">
+                        <Icon.Package color="gray" width={15} height={15} />
+                        <Text className="text-gray-700 text-xs">{item.time}</Text>
                     </View>
                 </View>
             </View>
