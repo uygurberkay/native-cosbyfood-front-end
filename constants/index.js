@@ -114,21 +114,42 @@ export const featured = {
             dishes: [
                 {
                     id: 1,
-                    name: 'pizza',
+                    name: 'Maxi Menü',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
                 },
                 {
                     id: 2,
-                    name: 'pizza',
+                    name: 'Büyük Boy Pizza',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
                 },
                 {
                     id: 3,
-                    name: 'pizza',
+                    name: 'Orta Boy Pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 4,
+                    name: 'Orta Boy Pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 5,
+                    name: 'Orta Boy Pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image:  require('../assets/images/pizzaDish.png')
+                },
+                {
+                    id: 6,
+                    name: 'Orta Boy Pizza',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
@@ -188,21 +209,21 @@ export const featured = {
             dishes: [
                 {
                     id: 1,
-                    name: 'pizza',
+                    name: 'Maxi Pizza',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
                 },
                 {
                     id: 2,
-                    name: 'pizza',
+                    name: 'Orta Boy Pizza',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
                 },
                 {
                     id: 3,
-                    name: 'pizza',
+                    name: 'Küçük Boy Pizza',
                     description: 'cheezy garlic pizza',
                     price: 10,
                     image:  require('../assets/images/pizzaDish.png')
