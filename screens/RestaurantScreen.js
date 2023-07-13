@@ -22,6 +22,8 @@ export default function RestaurantScreen() {
                     className="w-full h-72"
                     source={item.image}
                 />
+
+                {/* Back button */}
                 <TouchableOpacity
                     className="absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow"
                     onPress={() => navigation.goBack()}
@@ -29,7 +31,6 @@ export default function RestaurantScreen() {
                     <Icon.ArrowLeft strokeWidth={5} stroke={themeColors.bgColor(1)} />
 
                 </TouchableOpacity>
-                {/* burda sorun var */}
                 <View 
                 style={{
                     borderTopLeftRadius:40,

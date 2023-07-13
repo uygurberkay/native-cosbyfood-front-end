@@ -8,7 +8,7 @@ const CartIcon = () => {
     return (
         <View className="absolute bottom-5 w-full z-50">
             <TouchableOpacity
-            /* navigation.nativage('writeHereNavigation.jsName') */
+            /* navigation.navigate('writeHereNavigation.jsName') */
             onPress={() => { navigation.navigate('Cart')
 
             }}
