@@ -34,7 +34,7 @@ const DishRow = ({item}) => {
                             </TouchableOpacity>
                             
                             <Text className="px-3">
-                                {2}
+                                {0}
                             </Text>
 
                             <TouchableOpacity
