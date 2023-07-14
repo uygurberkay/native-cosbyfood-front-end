@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 const CartIcon = () => {
     const navigation = useNavigation()
     return (
-        <View className="absolute bottom-5 w-full z-50">
+        <View className="absolute bottom-2 w-full z-50">
             <TouchableOpacity
             /* navigation.navigate('writeHereNavigation.jsName') */
             onPress={() => { navigation.navigate('Cart')

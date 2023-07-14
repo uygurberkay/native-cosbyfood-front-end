@@ -33,7 +33,7 @@ export default function RestaurantScreen() {
                 </TouchableOpacity>
                 <View 
                 style={{
-                    borderTopLeftRadius:40,
+                    borderTopLeftRadius: 40,
                     borderTopRightRadius: 40
                 }}
                 className="bg-white  pt-6"
