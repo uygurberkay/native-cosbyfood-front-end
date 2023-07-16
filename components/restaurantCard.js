@@ -57,7 +57,7 @@ const RestaurantCard = ({item}) => {
                     </View>
                     <View className="flex-row items-center space-x-1">
                         <Icon.Package color="gray" width={15} height={15} />
-                        <Text className="text-gray-700 text-xs">{item.time}</Text>
+                        <Text className="text-gray-700 text-xs">{item.availableTime}</Text>
                     </View>
                 </View>
             </View>

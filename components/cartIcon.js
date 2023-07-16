@@ -24,10 +24,10 @@ const CartIcon = () => {
                     </Text>
                 </View>
                 <Text className="flex-1 text-center font-extrabold text-white text-lg">
-                    View Cart
+                    Öde
                 </Text>
                 <Text className="font-extrabold text-white text-lg">
-                    Total :₺{0}
+                    Toplam :₺{0}
                 </Text>
             </TouchableOpacity>
         </View>

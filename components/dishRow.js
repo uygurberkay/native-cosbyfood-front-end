@@ -18,7 +18,7 @@ const DishRow = ({item}) => {
                     <Text className="text-xl">
                         {item.name}
                     </Text>
-                    <Text className="text-gray-700">
+                    <Text className="text-gray-700 ">
                         {item.description}
                     </Text>
                     <View className="flex-row justify-between pl-3 items-center">

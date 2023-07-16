@@ -101,58 +101,60 @@ export const featured = {
     restaurants: [
         {
             id: 1,
-            name: "McDonald's",
+            name: "Daphne'nin Yeri",
             image: require('../assets/images/brand/mcdonalds.jpg'),
-            description: 'Hot and spicy pizzas',
-            lng: 27.138189538058008,
-            lat: 38.424401665914985,
+            description: "Alsancak'ta muhteşem bir akşam yemeği sizleri bekliyor.",
+            lng: 27.1321585405805,
+            lat: 38.41993290219605, 
             address: ' Konak',
+            exactAdress: 'Konak, 863. Sk. No:32, 35250 Konak/İzmir',
             stars: 5,
-            time: '15-25 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '2.1k',
-            category: 'Fast Food',
+            category: 'Akşam Yemeği',
             dishes: [
                 {
                     id: 1,
-                    name: 'Maxi Menü',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Akşam Sefası',
+                    description: ['Taze Somon Tartar\n','Izgara Biftek\n','Crème Brûlée\n'],
+                    price: 270,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
                 {
                     id: 2,
-                    name: 'Büyük Boy Pizza',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Yunan Gecesi',
+                    description: ['Ceviche\n','Ördek Confit\n','Çikolata Füzyon\n'],
+                    price: 320,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
                 {
                     id: 3,
-                    name: 'Orta Boy Pizza',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Ege Kokusu',
+                    description: ['Ricotta Dolgulu Ravioli\n','Izgara Kalamar\n','Elmalı Tart\n'],
+                    price: 310,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
                 {
                     id: 4,
-                    name: 'Orta Boy Pizza',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Urla Brûlée',
+                    description: ['Levrek Fileto\n','Sebzeli Risotto\n','Crème Brûlée\n'],
+                    price: 370,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
                 {
                     id: 5,
-                    name: 'Orta Boy Pizza',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Trakya Kokusu',
+                    description: ['Rokalı Kırmızı Pancar Salatası\n','Izgara Biftek\n','Çikolata Füzyon\n'],
+                    price: 290,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
                 {
                     id: 6,
-                    name: 'Orta Boy Pizza',
-                    description: 'cheezy garlic pizza',
-                    price: 10,
-                    image:  require('../assets/images/pizzaDish.png')
+                    name: 'Deniz Mavisi',
+                    description: ['Ceviche\n','Karides ve Midye Linguine\n','Crème Brûlée\n'],
+                    price: 360,
+                    image:  require('../assets/images/somonTartar.jpg')
                 },
             ]
     
@@ -166,7 +168,8 @@ export const featured = {
             lat: 38.2145602,
             address: ' Alsancak',
             stars: 1,
-            time: '20-25 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '3.2k',
             category: 'Fast Food',
             dishes: [
@@ -203,7 +206,8 @@ export const featured = {
             lat: 38.2145602,
             address: ' Buca',
             stars: 2,
-            time: '15-35 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '1.5k',
             category: 'Fast Food',
             dishes: [
@@ -240,7 +244,8 @@ export const featured = {
             lat: 38.2145602,
             address: ' Konak',
             stars: 4,
-            time: '25-35 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '5.3k',
             category: 'Fast Food',
             dishes: [
@@ -277,7 +282,8 @@ export const featured = {
             lat: 38.2145602,
             address: ' Alsancak',
             stars: 3,
-            time: '15-25 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '3.2k',
             category: 'Fast Food',
             dishes: [
@@ -314,7 +320,8 @@ export const featured = {
             lat: 38.2145602,
             address: ' Bayraklı',
             stars: 4,
-            time: '10-15 min',
+            checkedTime: '8 PM',
+            availableTime: '7 PM - 11 PM',
             reviews: '2.6k',
             category: 'Fast Food',
             dishes: [

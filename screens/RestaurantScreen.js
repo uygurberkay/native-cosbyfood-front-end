@@ -38,7 +38,7 @@ export default function RestaurantScreen() {
                 }}
                 className="bg-white  pt-6"
                 >
-                    <View className="px-5">
+                    <View className="px-5 space-y-2">
                         <Text
                             className="text-3xl font-bold"
                         >
@@ -56,18 +56,25 @@ export default function RestaurantScreen() {
                                     className="h-4 w-4"
                                     />
                                 ))}
+                            </View>
+                            <View>
                                 <Text className="font-semibold">
                                     {item.category}
                                 </Text>
                             </View>
+                        </View>
+
+                        <View className="flex-row items-center space-x-1">    
                             <View className="flex-row items-center space-x-1">
                                 <Icon.MapPin color="gray" width={15} height={15} />
-                                <Text className="text-gray-700 text-xs"> Nearby · </Text>
+                                <Text className="text-gray-700 text-xs"> Yakınlarda · </Text>
                                 <Text className="text-gray-700 text-xs font-semibold">{item.address}</Text>
-                            </View>
-                            <View className="flex-row items-center space-x-1">
-                                <Icon.Package color="gray" width={15} height={15} />
-                                <Text className="text-gray-700 text-xs">{item.time}</Text>
+                            </View>     
+                        </View>
+                        <View>
+                            <View className="flex-row items-center space-x-2">
+                                <Icon.Clock color="gray" width={15} height={15} />
+                                <Text className="text-gray-700 text-xs">{item.availableTime}</Text>
                             </View>
                         </View>
                         <Text className="text-gray-500 text-xs">
@@ -75,10 +82,10 @@ export default function RestaurantScreen() {
                         </Text>
                     </View>
                     <View className="pb-36 bg-white">
-                        <Text className="px-4 py-4 text-2xl font-bold">Menu</Text>
+                        <Text className="px-4 py-4 text-2xl font-bold">Menü</Text>
                         {/* dishes */}
                         {
-                            item.dishes.map((dish,index) => <DishRow item={{...dish}} key={index}/>)
+                            item.dishes.map((dish,index) => <DishRow item={{...dish}} key={index}/> )
                         }
                     </View>
                 </View>

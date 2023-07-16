@@ -22,7 +22,7 @@ const CartScreen = ({item}) => {
                     <Icon.ArrowLeft height={40} width={40} strokeWidth={3} stroke={'white'} />
                 </TouchableOpacity>
                 <View>
-                    <Text className="text-center font-bold text-xl">Your Cart</Text>
+                    <Text className="text-center font-bold text-xl">Kartın</Text>
                     <Text className="text-center text-gray-500">{restaurant.name}</Text>
                 </View>
             </View>
@@ -36,10 +36,13 @@ const CartScreen = ({item}) => {
                     source={require('../assets/images/bikeGuy.png')}
                     className="w-20 h-20 rounded-full"
                 />
-                <Text className="flex-1 pl-4">Deliver in 20-30 min</Text>
-                <Icon.MapPin className="flex items-center mx-2" color={"gray"} width={20} height={20} />
+                <View className="flex-1 pl-4 gap-2">
+                    <Text>Uygunluk Saatleri</Text>
+                    <Text>{restaurant.availableTime}</Text>
+                </View>
+                {/* <Icon.MapPin className="flex items-center mx-2" color={"gray"} width={20} height={20} /> */}
                 <TouchableOpacity>
-                    <Text className="font-bold" style={{color: themeColors.text}}>Change</Text>
+                    <Text className="font-bold" style={{color: themeColors.text}}>Değiştir</Text>
                 </TouchableOpacity>
             </View>
             <ScrollView 
@@ -86,15 +89,15 @@ const CartScreen = ({item}) => {
             >   
                 <View className="flex-row justify-between">
                     <Text className="text-gray-700">Ürün Toplamı</Text>
-                    <Text className="text-gray-700">₺80</Text>
+                    <Text className="text-gray-700">₺360</Text>
                 </View>
                 <View className="flex-row justify-between">
-                    <Text className="text-gray-700">Teslimat Ücreti</Text>
-                    <Text className="text-gray-700">₺10</Text>
+                    <Text className="text-gray-700">Rezervasyon Ücreti (Girişte Geri alınır)</Text>
+                    <Text className="text-gray-700">₺200</Text>
                 </View>
                 <View className="flex-row justify-between">
                     <Text className="text-gray-700">Toplam</Text>
-                    <Text className="text-gray-700">₺90</Text>
+                    <Text className="text-gray-700">₺560</Text>
                 </View>
                 <View>
                     <TouchableOpacity
@@ -102,7 +105,7 @@ const CartScreen = ({item}) => {
                         style={{backgroundColor: themeColors.bgColor(1)}}
                         className="p-3 rounded-full"
                     >
-                        <Text className="text-white text-center font-bold text-lg">Sipariş Ver</Text>
+                        <Text className="text-white text-center font-bold text-lg">Rezervasyon Yap</Text>
                     </TouchableOpacity>
                 </View>
             </View>
