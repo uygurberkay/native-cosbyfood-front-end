@@ -96,13 +96,13 @@ export const categories = [
 
 export const featured = {
     id: 1,
-    title: 'Fast Food',
-    description: 'Ağızda Dağılan Etler',
+    title: 'Akşam Yemeği',
+    description: 'Lezzetli bir akşam yemeği için doğru adres',
     restaurants: [
         {
             id: 1,
             name: "Daphne'nin Yeri",
-            image: require('../assets/images/brand/mcdonalds.jpg'),
+            image: require('../assets/images/brand/daphnePhoto1.jpeg'),
             description: "Alsancak'ta muhteşem bir akşam yemeği sizleri bekliyor.",
             lng: 27.1321585405805,
             lat: 38.41993290219605, 
@@ -126,7 +126,7 @@ export const featured = {
                     name: 'Yunan Gecesi',
                     description: ['Ceviche\n','Ördek Confit\n','Çikolata Füzyon\n'],
                     price: 320,
-                    image:  require('../assets/images/somonTartar.jpg')
+                    image:  require('../assets/images/ordekConfit.jpeg')
                 },
                 {
                     id: 3,

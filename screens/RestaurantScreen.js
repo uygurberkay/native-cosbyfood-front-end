@@ -81,7 +81,7 @@ export default function RestaurantScreen() {
                             {item.description}
                         </Text>
                     </View>
-                    <View className="pb-36 bg-white">
+                    <View className="pb-36 bg-gray-100">
                         <Text className="px-4 py-4 text-2xl font-bold">Menü</Text>
                         {/* dishes */}
                         {
