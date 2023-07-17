@@ -5,14 +5,13 @@ import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native';
 import {StatusBar} from 'expo-status-bar'
 import * as Icon from "react-native-feather";
-// import { useSelector } from 'react-redux';
-// import { selectRestaurant } from '../slices/restaurantSlice';
+import { useSelector } from 'react-redux';
+import { selectRestaurant } from '../slices/restaurantSlice';
 
 const CartScreen = ({item}) => {
-
-    const restaurant = featured.restaurants[0]
-    // const restaurant = useSelector(selectRestaurant)
+    const restaurant = useSelector(selectRestaurant)
     const navigation = useNavigation()
+
     return (
         <View className="bg-white flex-1 pt-3">
             <StatusBar style="auto"/>
