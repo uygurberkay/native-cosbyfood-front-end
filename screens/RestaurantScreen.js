@@ -43,7 +43,7 @@ export default function RestaurantScreen() {
                     borderTopLeftRadius: 40,
                     borderTopRightRadius: 40
                 }}
-                className="bg-white  pt-6"
+                className="bg-gray-100  pt-6"
                 >
                     <View className="px-5 space-y-2">
                         <Text

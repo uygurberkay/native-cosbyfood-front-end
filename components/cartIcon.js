@@ -3,15 +3,16 @@ import React from 'react'
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux'
-import { selectCartItems } from '../slices/cartSlice'
+import { selectCartItems, selectCartTotal } from '../slices/cartSlice'
 
 const CartIcon = () => {
     const navigation = useNavigation()
     const cartItem = useSelector(selectCartItems)
+    const cartTotal = useSelector(selectCartTotal)
     if(!cartItem.length) return;
     return (
         <View className="absolute bottom-2 w-full z-50">
-            <TouchableOpacity
+            <TouchableOpacity  
             /* navigation.navigate('writeHereNavigation.jsName') */
             onPress={() => { navigation.navigate('Cart')
 
@@ -24,14 +25,14 @@ const CartIcon = () => {
                     style={{backgroundColor: 'rgba(255,255,255,0.3'}}
                 >
                     <Text className=" font-extrabold text-white text-lg">
-                        {0}
+                        {cartItem.length}
                     </Text>
                 </View>
                 <Text className="flex-1 text-center font-extrabold text-white text-lg">
-                    Öde
+                    Ödemeye Git
                 </Text>
                 <Text className="font-extrabold text-white text-lg">
-                    Toplam :₺{0}
+                    ₺{cartTotal}
                 </Text>
             </TouchableOpacity>
         </View>

@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {featured} from '../constants'
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native';
@@ -7,11 +7,28 @@ import {StatusBar} from 'expo-status-bar'
 import * as Icon from "react-native-feather";
 import { useSelector } from 'react-redux';
 import { selectRestaurant } from '../slices/restaurantSlice';
+import { selectCartItems, selectCartTotal } from '../slices/cartSlice';
 
 const CartScreen = ({item}) => {
+
     const restaurant = useSelector(selectRestaurant)
     const navigation = useNavigation()
+    const cartItems = useSelector(selectCartItems)
+    const cartTotal = useSelector(selectCartTotal)
+    const [groupedItems, setGroupedItems] = useState({})
 
+    useEffect(()=> {
+        const items = cartItems.reduce((group, item) => {
+            if(group[item.id]){
+                group[item.id].push(item)
+            }else {
+                group[item.id] = [item]
+            }
+            return group;
+        },{})
+        setGroupedItems(items)
+    },[cartItems])
+    
     return (
         <View className="bg-white flex-1 pt-3">
             <StatusBar style="auto"/>
