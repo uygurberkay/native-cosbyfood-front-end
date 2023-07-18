@@ -1,13 +1,12 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import {featured} from '../constants'
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native';
 import {StatusBar} from 'expo-status-bar'
 import * as Icon from "react-native-feather";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../slices/restaurantSlice';
-import { selectCartItems, selectCartTotal } from '../slices/cartSlice';
+import { removeFromCart, selectCartItems, selectCartTotal } from '../slices/cartSlice';
 
 const CartScreen = ({item}) => {
 
@@ -16,6 +15,8 @@ const CartScreen = ({item}) => {
     const cartItems = useSelector(selectCartItems)
     const cartTotal = useSelector(selectCartTotal)
     const [groupedItems, setGroupedItems] = useState({})
+    const reservationFee = 200;
+    const dispatch = useDispatch()
 
     useEffect(()=> {
         const items = cartItems.reduce((group, item) => {
@@ -73,17 +74,18 @@ const CartScreen = ({item}) => {
                 className="bg-white pt-5"
             >
                 {
-                    restaurant.dishes.map((dish,index)=>{
+                    Object.entries(groupedItems).map(([key, items])=>{
+                        let dish = items[0]
                         return (
                             <View 
-                                key={index}
+                                key={key}
                                 className="flex-row items-center space-x-3 py-2 px-4 bg-white rounded-3xl mx-2 mb-3 shadow-md"
                             >
                                 <Text 
                                     className="font-bold"
                                     style={{color: themeColors.text}}
                                 >
-                                    2
+                                    {items.length} x
                                 </Text>
                                 <Image 
                                         className=" h-14 w-14 rounded-full"
@@ -93,6 +95,7 @@ const CartScreen = ({item}) => {
                                 <Text className="font-semibold text-base">₺{dish.price}</Text>                              
                                 <TouchableOpacity 
                                     className="p-1 rounded-full"
+                                    onPress={()=> dispatch(removeFromCart({id: dish.id}))}
                                     style={{backgroundColor: themeColors.bgColor(1)}}
                                 >
                                     <Icon.Minus strokeWidth={2} height={20} width={20} stroke={'white'} />
@@ -102,26 +105,26 @@ const CartScreen = ({item}) => {
                     })
                 }
             </ScrollView>
-            {/* Totals */}
+            {/* Totals */} 
             <View 
                 style={{backgroundColor: themeColors.bgColor(0.2)}}
                 className="p-3 px-8 rounded-t-3xl space-y-2"
             >   
                 <View className="flex-row justify-between">
                     <Text className="text-gray-700">Ürün Toplamı</Text>
-                    <Text className="text-gray-700">₺360</Text>
+                    <Text className="text-gray-700">₺{cartTotal}</Text>
                 </View>
                 <View className="flex-row justify-between">
                     <Text className="text-gray-700">Rezervasyon Ücreti (Girişte Geri alınır)</Text>
-                    <Text className="text-gray-700">₺200</Text>
+                    <Text className="text-gray-700">₺{reservationFee}</Text>
                 </View>
                 <View className="flex-row justify-between">
                     <Text className="text-gray-700">Toplam</Text>
-                    <Text className="text-gray-700">₺560</Text>
+                    <Text className="text-gray-700">₺{cartTotal+reservationFee}</Text>
                 </View>
                 <View>
                     <TouchableOpacity
-                    onPress={() => navigation.navigate('OrderPreparing')}
+                        onPress={() => navigation.navigate('OrderPreparing')}
                         style={{backgroundColor: themeColors.bgColor(1)}}
                         className="p-3 rounded-full"
                     >
