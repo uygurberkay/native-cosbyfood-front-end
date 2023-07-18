@@ -82,7 +82,7 @@ const DeliveryScreen = () => {
                         <View className="flex-row items-center space-x-3 mr-3">
                             
                             <TouchableOpacity className="bg-white rounded-full p-2">
-                                <Icon.Phone fill={themeColors.bgColor(1)} stroke={themeColors.bgColor(1)} strokeWidth={1} />
+                                <Icon.MessageSquare fill={themeColors.bgColor(1)} stroke={themeColors.bgColor(1)} strokeWidth={1} />
                             </TouchableOpacity>
 
                             <TouchableOpacity 
