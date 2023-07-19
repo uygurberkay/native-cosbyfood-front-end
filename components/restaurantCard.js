@@ -21,6 +21,7 @@ const RestaurantCard = ({item}) => {
                 <Image 
                     className="h-36 w-64 rounded-t-xl" 
                     source={item.image}
+                    // source={{ uri: urlFor(imgUrl).url()}}
                 />
                 <View className="px-3 pb-4 space-y-2">
                     <Text className="text-lg font-bold pt-2">
@@ -48,6 +49,7 @@ const RestaurantCard = ({item}) => {
                         </Text>
                         <Text className="font-semibold">
                             {item.category}
+                            {/* {item?.type?.name} */}
                         </Text>
                     </View>
                     <View className="flex-row items-center space-x-1">

@@ -7,8 +7,20 @@ import {themeColors} from '../theme'
 import { featured } from '../constants';
 import FeaturedRow from '../components/featuredRow';
 import Categories from '../components/categories';
+import { useEffect } from 'react';
+import {getFeaturedRestaurants } from '../api';
+import { useState } from 'react';
+
 
 export default function HomeScreen() {
+const [featuredRestaurants, setFeaturedRestaurants] = useState([])
+
+    useEffect(()=> {
+        getFeaturedRestaurants().then(data => {
+            setFeaturedRestaurants(data)
+        })
+    },[])
+
     return (
         <SafeAreaView>
             <StatusBar barStyle="dark-content"/>
@@ -19,7 +31,7 @@ export default function HomeScreen() {
                     <TextInput placeholder='Restaurant' className="ml-2 flex-1" keyboardType='default' />
                     <View className="flex-row items-center space-x-1 border-0 border-l-2 pl-2 border-l-gray-300">
                         <Icon.MapPin height="20" width="20" stroke="gray" />
-                        <Text className="text-gray-600">Konak, İzmir</Text>
+                        <TextInput className="text-gray-600">Konak, İzmir</TextInput>
                     </View>
                 </View>
                 <View style={{backgroundColor: themeColors.bgColor(1)}} className="p-3 rounded-full">
