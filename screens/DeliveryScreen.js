@@ -81,7 +81,10 @@ const DeliveryScreen = () => {
                         </View>
                         <View className="flex-row items-center space-x-3 mr-3">
                             
-                            <TouchableOpacity className="bg-white rounded-full p-2">
+                            <TouchableOpacity 
+                                className="bg-white rounded-full p-2"
+                                onPress={() => navigation.navigate('Comment')}
+                            >
                                 <Icon.MessageSquare fill={themeColors.bgColor(1)} stroke={themeColors.bgColor(1)} strokeWidth={1} />
                             </TouchableOpacity>
 
@@ -89,7 +92,7 @@ const DeliveryScreen = () => {
                                 onPress={cancelOrder} 
                                 className="bg-white rounded-full p-2"
                             >
-                                <Icon.X stroke={'red'} strokeWidth={3} />
+                                <Icon.X stroke={themeColors.bgColor(1)} strokeWidth={3} />
                             </TouchableOpacity>
                         </View>
                     </View>

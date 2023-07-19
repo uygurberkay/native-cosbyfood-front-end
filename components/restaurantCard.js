@@ -28,29 +28,30 @@ const RestaurantCard = ({item}) => {
                         {item.name}
                     </Text>
                     <View className="flex-row items-center space-x-1">
-                        {/* multiple stars */}
-                        {Array.from({ length: item.stars }, (_, index) => (
+                        {/* Multiple stars */}
+                        {/* {Array.from({ length: item.stars }, (_, index) => (
                             <Image
                             key={index}
                             source={require('../assets/images/fullStar.png')}
                             className="h-4 w-4"
                             />
-                        ))}
-                        {/* <Image
-                            source={require('../assets/images/fullStar.png')}
-                            className="h-4 w-4"
-                            /> */}
-                        <Text className="text-green-700">
-                            {/* doesn't show for now */}
-                            {/* {item.stars} */}
-                        </Text>
-                        <Text className="text-gray-700">
-                            {/* ({item.reviews} review)    */}
-                        </Text>
-                        <Text className="font-semibold">
-                            {item.category}
-                            {/* {item?.type?.name} */}
-                        </Text>
+                        ))} */}
+                            <Text className="text-green-700">
+                                {/* doesn't show for now */}
+                                {/* {item.stars} */}
+                            </Text>
+                            <Text className="font-semibold">
+                                {item.category}
+                                {/* {item?.type?.name} */}
+                            </Text>
+                            {/* Single Stars */}
+                            <Text className="text-gray-700">
+                                {item.reviews} 
+                            </Text>
+                            <Image
+                                source={require('../assets/images/fullStar.png')}
+                                className="h-4 w-4"
+                            />
                     </View>
                     <View className="flex-row items-center space-x-1">
                         <Icon.MapPin color="gray" width={15} height={15} />
@@ -58,7 +59,7 @@ const RestaurantCard = ({item}) => {
                         <Text className="text-gray-700 text-xs font-semibold">{item.address}</Text>
                     </View>
                     <View className="flex-row items-center space-x-1">
-                        <Icon.Package color="gray" width={15} height={15} />
+                        <Icon.Clock color="gray" width={15} height={15} />
                         <Text className="text-gray-700 text-xs">{item.availableTime}</Text>
                     </View>
                 </View>
