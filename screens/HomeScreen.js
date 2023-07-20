@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView } from 'react-native'
+import { View, Text, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
@@ -10,11 +10,12 @@ import Categories from '../components/categories';
 import { useEffect } from 'react';
 import {getFeaturedRestaurants } from '../api';
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function HomeScreen() {
 const [featuredRestaurants, setFeaturedRestaurants] = useState([])
-
+const navigation = useNavigation()
     useEffect(()=> {
         getFeaturedRestaurants().then(data => {
             setFeaturedRestaurants(data)
@@ -34,9 +35,13 @@ const [featuredRestaurants, setFeaturedRestaurants] = useState([])
                         <TextInput className="text-gray-600">Konak, İzmir</TextInput>
                     </View>
                 </View>
+                <TouchableOpacity
+                    onPress={()=> navigation.navigate('Login')}
+                >
                 <View style={{backgroundColor: themeColors.bgColor(1)}} className="p-3 rounded-full">
-                    <Icon.Sliders height={20} width={20} strokeWidth="2.5" stroke="white" />
+                    <Icon.LogIn height={20} width={20} strokeWidth="2.5" stroke="white" />
                 </View>
+                </TouchableOpacity>
             </View>
             {/* Her menü seçeneğinde useEffect ile o sayfaya render ayarla */}
             {/* main */}
