@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView } from 'react-native'
+import { View, Text, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
@@ -10,10 +10,12 @@ import Categories from '../components/categories';
 import { useEffect } from 'react';
 import {getFeaturedRestaurants } from '../api';
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function HomeScreen() {
-const [featuredRestaurants, setFeaturedRestaurants] = useState([])
+    const navigation = useNavigation()
+    const [featuredRestaurants, setFeaturedRestaurants] = useState([])
 
     useEffect(()=> {
         getFeaturedRestaurants().then(data => {
@@ -25,7 +27,7 @@ const [featuredRestaurants, setFeaturedRestaurants] = useState([])
         <SafeAreaView>
             <StatusBar barStyle="dark-content"/>
             {/* Search Bar */}
-            <View className="flex-row items-center space-x-2 px-4 pb-2 ">
+            <View className="flex-row items-center space-x-2 px-4 pb-2 pt-4 ">
                 <View className="flex-row flex-1 items-center p-3 rounded-full border border-gray-300">
                     <Icon.Search height="25" width="25" stroke="gray" />
                     <TextInput placeholder='Restaurant' className="ml-2 flex-1" keyboardType='default' />
@@ -34,9 +36,13 @@ const [featuredRestaurants, setFeaturedRestaurants] = useState([])
                         <TextInput className="text-gray-600">Konak, İzmir</TextInput>
                     </View>
                 </View>
-                <View style={{backgroundColor: themeColors.bgColor(1)}} className="p-3 rounded-full">
-                    <Icon.Sliders height={20} width={20} strokeWidth="2.5" stroke="white" />
-                </View>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    <View style={{backgroundColor: themeColors.bgColor(1)}} className="p-3 rounded-full">
+                        <Icon.LogIn height={20} width={20} strokeWidth="2.5" stroke="white" />
+                    </View>
+                </TouchableOpacity>
             </View>
             {/* Her menü seçeneğinde useEffect ile o sayfaya render ayarla */}
             {/* main */}
